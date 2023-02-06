@@ -1,6 +1,10 @@
-# Turborepo starter
+<div style="text-align: center"><img src="images/cover.jpeg" /></div>
 
-This is an official npm starter turborepo.
+# Turborepo starter with React (Next.js), Vue (Nuxt.js), tailwindCSS, and TypeScript
+
+This is a [Turborepo](https://turborepo.org/) starter with two different apps/frameworks using (`React/Next.js`, `Vue/Nuxt.js`) with TailwindCSS installed and a shared `ui` package for each framework.
+
+**Want to know/understand everything about this monorepo?** [Read this artical](https://blog.munafio.com/building-a-monorepo-using-turborepo-with-react-js-and-vue-js-b6b25d7e41f7)
 
 ## What's inside?
 
@@ -8,66 +12,47 @@ This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It inclu
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `apps`
+  - `next-app`: a [Next.js](https://nextjs.org) app
+  - `nuxt-app`: a [Nuxt.js](https://nuxtjs.org) app
+- `packages`
+  - `react-ui`: a stub React component library shared across all React applications.
+  - `vue-ui`: a stub Vue component library shared across all Vue applications.
+  - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+  - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+<div style="text-align: center">
+<img src="images/demo.gif" />
+</div>
 
 ### Utilities
 
 This turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [TailwindCSS](https://www.tailwindcss.com/) a utility-first CSS framework.
+- [ESLint](https://eslint.org/) for code linting.
+- [Prettier](https://prettier.io) for code formatting.
+- [Husky](https://www.npmjs.com/package/husky) Modern native Git hooks made easy.
 
-### Build
+## Getting Started
 
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
+First clone the repo, then install the dependencies
 
 ```
-cd my-turborepo
+npm install
+```
+
+after that, start the development server (apps running in parallel)
+
+```
 npm run dev
 ```
 
-### Remote Caching
+That's it, enjoy!
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## Author
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Munaf A. Mahdi](https://twitter.com/munafiofficial)
